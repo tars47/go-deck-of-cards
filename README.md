@@ -56,7 +56,7 @@ cards := deck.New(
 ```
 //blackjack requires 3 standard decks
 cards := deck.New(
-    deck.AddDeck(3)
+    deck.AddDeck(2)
 )
 ```
 
