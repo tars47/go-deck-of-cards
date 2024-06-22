@@ -4,13 +4,13 @@ Implements deck of cards with functional options
 
 ## Default New
 
-```
+```go
 cards := deck.New()
 ```
 
 ## New Deck with Shuffle
 
-```
+```go
 cards := deck.New(
     deck.Shuffle
 )
@@ -18,7 +18,7 @@ cards := deck.New(
 
 ## New Deck with Jokers
 
-```
+```go
 cards := deck.New(
     deck.Jokers(2)
 )
@@ -26,7 +26,7 @@ cards := deck.New(
 
 ## New Deck with Default Sort
 
-```
+```go
 cards := deck.New(
     deck.DefaultSort
 )
@@ -34,7 +34,7 @@ cards := deck.New(
 
 ## New Deck with Custom Sort
 
-```
+```go
 cards := deck.New(
     deck.Sort(deck.Less)
 )
@@ -42,7 +42,7 @@ cards := deck.New(
 
 ## New Deck with Filter
 
-```
+```go
 filter := func(card deck.Card) bool {
 		return card.Rank == Two || card.Rank == Three
 }
@@ -53,7 +53,7 @@ cards := deck.New(
 
 ## New Deck with multiple decks combined
 
-```
+```go
 //blackjack requires 3 standard decks
 cards := deck.New(
     deck.AddDeck(2)
@@ -62,7 +62,7 @@ cards := deck.New(
 
 ## New Deck with multiple options
 
-```
+```go
 addJackOfSpades := func(c *[]deck.Card){
    cards := *c
    cards = append(cards, Card{Suit: deck.Spade, Rank: deck.Jack})
