@@ -120,7 +120,7 @@ func Filter(f func(Card) bool) func(*[]Card) {
 	}
 }
 
-func AddDeck(i int) func(*[]Card) {
+func WithDecks(i int) func(*[]Card) {
 	return func(c *[]Card) {
 		cards := *c
 		var ret []Card
